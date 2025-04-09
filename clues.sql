@@ -108,6 +108,10 @@ AND c.name ILIKE '%Venecia%';
 -- the capital! Look up the country's capital, and get there pronto! 
 --Send us the name of where you're headed and we'll
 -- follow right behind you!
+SELECT c.name AS capital_name
+FROM cities c
+JOIN countries co ON c.countrycode = co.code
+WHERE co.name = 'Colombia';
 
 -- Bogota, Columbia
 
